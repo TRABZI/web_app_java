@@ -24,4 +24,14 @@ node {
      sh "${mvnHome}/bin/mvn clean compile package "
    }
 
+   stage('Build Dockerfile image'){
+	app=docker.build("mohammedaminetrabzi/tomcat:9.0")
+   }
+
+   stage('Test Image') {
+	docker.image('tomcat:9.0').withrun(' -p 8880:80') { c ->
+		sh 'docker ps'
+		sh 'curl localhost'
+	}
+   }
 }
