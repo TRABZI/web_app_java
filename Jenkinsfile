@@ -1,5 +1,5 @@
 node {
-
+    def app
     stage('Clone repository') {
         	git 'https://github.com/TRABZI/web_app_java.git'
     }
@@ -25,9 +25,7 @@ node {
    }
 
    stage('Build Dockerfile image'){
-
-	docker.build "mohammedaminetrabzi/myimagedocker"
-
+	app=docker.build("mohammedaminetrabzi/myimagedocker")
    }
 
    stage('Test Image') {
