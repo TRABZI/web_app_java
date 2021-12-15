@@ -25,7 +25,7 @@ node {
    }
 
    stage('Build Dockerfile image'){
-	sh " docker build -t myImage . "
+	sh " docker build -t myimage . "
    }
 
    stage('Test Image') {
