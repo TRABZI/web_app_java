@@ -25,7 +25,7 @@ node {
    }
 
    stage('Build Dockerfile image'){
-	docker build -t mohammedaminetrabzi/tomcat:9.0 .
+	docker build -t myImage .
    }
 
    stage('Test Image') {
