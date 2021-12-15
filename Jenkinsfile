@@ -21,7 +21,7 @@ node {
 
    stage('Maven Compile &  Package'){
      def mvnHome = tool name: 'maven', type: 'maven'
-     sh "mvn -f /var/lib/jenkins/workspace/tp_2_devops package"
+     sh "${mvnHome}/bin/mvn package"
    }
 
 
