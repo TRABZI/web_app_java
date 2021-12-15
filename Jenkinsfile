@@ -25,7 +25,9 @@ node {
    }
 
    stage('Build Dockerfile image'){
-	sh " sudo docker build -t myimage . "
+
+	docker.build "mohammedaminetrabzi/myimagedocker"
+
    }
 
    stage('Test Image') {
