@@ -25,5 +25,8 @@ node {
      sh "${mvnHome}/bin/mvn package"
    }
 
+  stage('docker-compose up'){
+  	sh "docker-compose up -d" 
+  }
 
 }
