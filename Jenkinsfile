@@ -1,6 +1,6 @@
 node {
 
-    stage('Clone') {
+    stage('Clone repository') {
         	git 'https://github.com/TRABZI/web_app_java.git'
     }
 
