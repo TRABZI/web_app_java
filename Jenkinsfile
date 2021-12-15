@@ -26,7 +26,7 @@ node {
    }
 
   stage('docker-compose up'){
-  	sh "docker-compose up -d" 
+  	sh "sudo docker-compose up -d" 
   }
 
 }
