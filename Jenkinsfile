@@ -25,7 +25,7 @@ node {
    }
 
    stage('Build Dockerfile image'){
-	build("mohammedaminetrabzi/tomcat")
+	build("tomcat")
    }
 
    stage('Test Image') {
