@@ -4,7 +4,6 @@ node {
         	git 'https://github.com/TRABZI/web_app_java.git'
     }
 
-
     stage('SonarQube Built-in Code analysis') {
         def scannerHome = tool 'sonar'
         withSonarQubeEnv('sonar'){
