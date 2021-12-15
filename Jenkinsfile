@@ -25,7 +25,7 @@ node {
    }
 
    stage('Build Dockerfile image'){
-	app=docker.build("mohammedaminetrabzi/tomcat")
+	.build("mohammedaminetrabzi/tomcat")
    }
 
    stage('Test Image') {
