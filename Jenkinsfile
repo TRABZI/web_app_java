@@ -1,5 +1,6 @@
 node {
     def app
+
     stage('Clone repository') {
         	git 'https://github.com/TRABZI/web_app_java.git'
     }
@@ -25,12 +26,6 @@ node {
    }
 
    stage('Build Dockerfile image'){
-	build("tomcat")
-   }
-
-   stage('Test Image') {
-	docker build -t mywebapp .
-        sh 'docker ps'
-        sh 'curl localhost'
+	app = docker.build("mohammedaminetrabzi/tomcat")
    }
 }
